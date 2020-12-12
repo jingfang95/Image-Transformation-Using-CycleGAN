@@ -168,6 +168,8 @@ Identity mapping is performed by transforming an image to itself using the Gener
 
 This is an optional step to minimize non-required computing costs and it provides only the color preservation of Generators.
 
+<img src="Images/Identity_Loss.PNG" align="center">
+
 ### Training
 We have two training sets, A and B, for each transfer. We feed both sets of images into our CycleGAN model and generate transformed images from the additional images that we scraped. 
   - Chinese Painting Transformation
