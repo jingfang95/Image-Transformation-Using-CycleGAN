@@ -56,6 +56,7 @@ Our dataset consists of approximately 100 modern street view photos and 100 phot
 
 ### Methods of acquisition
 We utilized the add-in tool in Google Chrome, ImageAssistant Batch Image Downloader, to scrape photos from search engines. 
+
 <img src="Images/ImageAssistant.png" align="center">
 
 ## Data Pre-processing and Exploration
