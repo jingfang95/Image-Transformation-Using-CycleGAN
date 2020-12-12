@@ -231,3 +231,5 @@ For the historical to modern style transfer, we could also try the [NoGAN](https
 ## References
 1. [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf)
 2. [Style Transferring Of Image Using (CycleGAN)](https://medium.com/datadriveninvestor/style-transferring-of-image-using-cyclegan-3cc7aff4fe61)
+3. [CycleGAN: Putting It All Together](https://www.coursera.org/lecture/apply-generative-adversarial-networks-gans/cyclegan-putting-it-all-together-bLVyE)
+4. [I’m Something of a Painter Myself](https://www.kaggle.com/c/gan-getting-started)
