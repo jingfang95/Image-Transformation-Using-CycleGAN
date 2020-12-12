@@ -16,6 +16,7 @@
   - Methods of acquisition
 - [Data Pre-processing and Exploration](#data-pre-processing-and-exploration)
   - Feature engineering/selection
+  - Decoded Image
 - [Learning and Modeling](#learning-and-modeling)
   - Chosen models and why
   - Explaining Loss Function
