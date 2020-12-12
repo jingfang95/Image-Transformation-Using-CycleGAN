@@ -32,7 +32,7 @@ Traditional artworks such as Chinese paintings have left us a deep impression on
 
 ## Introduction and Background
 ### Problem being addressed and why it’s important
-Our project idea is inspired by a Kaggle competition that transforms regular images into the painting style of famous artists, such as Monet, Van Gogh, Cezanne, Ukiyo-e, and etc. We also studied related works done by other people as well, such as transforming image of zebras into horses or changing a summer photo into a winter photo.
+Our project idea is inspired by a Kaggle competition that transforms regular images into the painting style of famous artists, such as Monet, Van Gogh, Cezanne, Ukiyo-e, and etc. We also studied related works done why other people as well, such as transforming image of zebras into horses or changing a summer photo into a winter photo.
 
 We wanted to bring Chinese culture into it. We are transforming images into two different styles – with one of them being photos of street view of Shanghai China in the 1930s, and another set of images of traditional Chinese paintings. What we did was, we transformed historic Shanghai photos into modern style and scenery photos into traditional Chinese paintings style, and vice-versa. Our goal is to transform across various images to have a perspective of its appearance across time and art genres.
 
@@ -100,13 +100,13 @@ CycleGAN (Cycle Generative Adversarial Network)
 
 <img src="Images/CycleGAN.png" align="center">
 
-The Image above illustrates the basic idea of the algorithm. In another word, given any 2 unordered image collections X and Y (the X and Y does not need to be a pair), the algorithm learns to automatically “translate” an image from one into another and vice versa.
-
-Though we lacked supervision in the form of paired examples, we exploited supervision at the collection-level. For example, if we want to transfer a zebra image to a horse image, we would train the model using a collection of zebra images and a collection of horse images. Then, theoretically, we could transfer any zebra image to horse image.
+The Image above illustrates the basic idea of the algorithm. Which is, given any 2 unordered image collections X and Y (the X and Y does not need to be a pair), the algorithm learns to automatically “translate” an image from one into another and vice versa.
 
 <img src="Images/Paired_Unpaired.png" align="center">
 
-One thing that makes CycleGan unique is that CycleGan does not need paired inputs. In another word, given any 2 unordered image collections X and Y (the X and Y does not need to be a pair), the algorithm learns to automatically “translate” an image from one into another and vice versa. 
+Via CycleGan, the algorithm tries to find the mapping that makes the distribution of the transferred image indistinguishable from the distribution oiif the target.
+
+Though we lacked supervision in the form of paired examples, we exploited supervision at the collection-level. For example, if we want to transfer a zebra image to a horse image, we would train the model using a collection of zebra images and a collection of horse images. Then, theoretically, we could transfer any zebra image to horse image.
 
 CycleGANs train two Generators and two Discriminators networks.
 
