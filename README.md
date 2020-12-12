@@ -5,9 +5,11 @@
 #### Team members: Yiwei Zhou, Yuhan Yin, Jing Fang, Minhua Wu and Nai Wang
 
 ## Table of Contents
+- [Abstract](#abstract)
 - [Introduction and Background](#introduction-and-background)
   - Problem being addressed and why it’s important
   - Related work
+  - Outline of approach and rationale
 - [Data Collection and Description](#data-collection-and-description)
   - Relevant Characteristics
   - Sources
@@ -24,7 +26,8 @@
   - Future work
 - [References](#references)
 
-
+## Abstract
+Traditional artworks such as Chinese paintings have left us a deep impression on how artists paint real objects and landscape sceneries. Beyond admiring the verisimilitude of their work, we would like to train a model using CycleGAN (Cycle Generative Adversarial Network) to automatically “translate” an image from one into another and vice versa. Our objective is to train an algorithm that could transfer modern photos into works belonging to a specific painting style, and vice versa. 
 
 ## Introduction and Background
 ### Problem being addressed and why it’s important
@@ -35,6 +38,12 @@ We wanted to bring Chinese culture into it. We are transforming images into two 
 ### Related work
 [CycleGAN and pix2pix in PyTorch](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 <img src="Images/Related_work.PNG" align="center">
+
+### Outline of approach and rationale
+- Data Preprocessing
+- Model Trainings 
+- Model Modifications
+- Model Evaluations
 
 ## Data Collection and Description
 ### Relevant Characteristics
@@ -58,9 +67,30 @@ We utilized the add-in tool in Google Chrome, ImageAssistant Batch Image Downloa
 - Apply the transformation function to all images to get a ParallelMapDataset
 
 ```Python
-# you can insert code here
+path_trA = tf.data.Dataset.from_tensor_slices(trainA)
+path_trB = tf.data.Dataset.from_tensor_slices(trainB)
+path_teA = tf.data.Dataset.from_tensor_slices(testA)
+path_teB = tf.data.Dataset.from_tensor_slices(testB)
+AUTO = tf.data.experimental.AUTOTUNE
+
+def preprocess_image(image):
+  image = tf.image.decode_jpeg(image, channels=3)
+  image = tf.image.resize(image, [256, 256])
+  image /= 255.0  # normalize to [0,1] range
+  return image
+
+def load_and_preprocess_image(path):
+  image = tf.io.read_file(path)
+  return preprocess_image(image)
+
+def load_dataset(path):
+  dataset = path.map(load_and_preprocess_image, num_parallel_calls=AUTO)
+  return dataset
+
 ```
 
+### Decoded Image (Sample)
+<img src="Images/Decoded_image.png" align="center">
 
 ## Learning and Modeling
 ### Chosen models and why
