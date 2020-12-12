@@ -32,7 +32,7 @@ Traditional artworks such as Chinese paintings have left us a deep impression on
 
 ## Introduction and Background
 ### Problem being addressed and why it’s important
-Our project idea is inspired by a Kaggle competition that transforms regular images into the painting style of famous artists, such as Monet, Van Gogh, Cezanne, Ukiyo-e, and etc. We also studied related works done why other people as well, such as transforming image of zebras into horses or changing a summer photo into a winter photo.
+Our project idea is inspired by a Kaggle competition that transforms regular images into the painting style of famous artists, such as Monet, Van Gogh, Cezanne, Ukiyo-e, and etc. We also studied related works done by other people as well, such as transforming image of zebras into horses or changing a summer photo into a winter photo.
 
 We wanted to bring Chinese culture into it. We are transforming images into two different styles – with one of them being photos of street view of Shanghai China in the 1930s, and another set of images of traditional Chinese paintings. What we did was, we transformed historic Shanghai photos into modern style and scenery photos into traditional Chinese paintings style, and vice-versa. Our goal is to transform across various images to have a perspective of its appearance across time and art genres.
 
